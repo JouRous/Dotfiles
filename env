@@ -1,0 +1,23 @@
+#!/bin/sh
+# color
+
+# nvidia
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+alias='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
+
+# npm
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+
+# xathority
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+
+# wget
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+[ ! -f "$XDG_CONFIG_HOME"/wgetrc ] && echo hsts-file \= "$XDG_CACHE_HOME"/wget-hsts >> "$XDG_CONFIG_HOME"/wgetrc
+
+# tmux
+export TMUX_PLUGIN_PATH=$XDG_CONFIG_HOME/tmux/plugins
+
+# rush
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
